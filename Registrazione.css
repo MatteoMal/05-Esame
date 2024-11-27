@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap");
+
+#logo{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+#logo2,#logo3{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+#bottone1,#bottone2{
+    background-color: rgb(206, 104, 121);
+}
+#bottone1:hover{
+    background-color: rgb(203, 68, 90);
+}
+#bottone2:hover{
+    background-color: rgb(203, 68, 90);
+}
+body{
+    background-image: url('Immagini/TV.webp');
+    background-repeat: no-repeat;
+    backdrop-filter: brightness(30%);
+    background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+p{
+    margin: 0;
+}
+.modal-content{
+    max-width: fit-content;
+}
+#align{
+    margin-right: 14% !important;
+}
+#logo4,#logo5{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+}
+.user-box {
+    position: relative;
+  }
+#span-1 {
+    position: absolute;
+    top: 80%;
+    right: 50px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  #span-2 {
+    position: absolute;
+    top: 70%;
+    right: 50px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .password-toggle-icon i {
+    font-size: 18px;
+    line-height: 1;
+    transition: color 0.3s ease-in-out;
+    margin-bottom: 20px;
+  }
+  
+  .password-toggle-icon i:hover {
+    color: #000;
+  }
+  .mt-1{
+    font-size: 14px;
+  }
+  @media(min-width: 481px)and (max-width: 767px){
+    #span-1 {
+      position: absolute;
+      top: 80%;
+      right: 40px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    #span-2 {
+      position: absolute;
+      top: 70%;
+      right: 40px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+  @media(min-width: 320px)and (max-width: 480px){
+    #span-1 {
+      position: absolute;
+      top: 80%;
+      right: 30px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    #span-2 {
+      position: absolute;
+      top: 70%;
+      right: 30px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="Registrazione.css">
+        <link rel="icon" type="image/x-icon" href="Immagini/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Pagina di registrazione</title>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <header>
+        <!-- Navbar con link e pulsante per loggarsi -->
+            <div class="container-fluid bg-dark navbar navbar-expand-lg">
+                <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link active me-5 text-danger ms-3" id="logo" aria-current="page" title="CODE" href="Registrazione.html"><span class="text-danger">CO</span><span class="text-white">DE</span></a>
+                      </li>
+                      <li>
+                      <a class="nav-link active mt-2 text-white" title="Vai alla pagina iniziale" aria-current="page" href="Registrazione.html">Pagina iniziale</a>
+                      </li>
+                  </ul>
+                </div>
+                <form class="d-flex me-5">
+                  <button class="btn text-light" id="bottone1" type="submit">Accedi</button>
+                </form>
+            </div>
+      </header>
+      <main>
+        <!-- Modal con form per registrarsi -->
+            <div class="modal-content mt-5 mx-auto p-2">
+              <div class="text-start bg-dark m-5 text-white p-4">
+                <h1 class="pt-5 modal-title text-center ps-3 pe-3">Inserisci i tuoi dati</h1>
+                <hr>
+                <form id="ilMioForm" novalidate>
+                  <h3 class="mt-5 ms-3">Credenziali di accesso</h3>
+                  <div class="user-box">
+                  <label for="password" class="mt-5 ms-3">Password*</label>
+                    <br>
+                <input type="password" id="password" placeholder="Password" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <span class="password-toggle-icon text-black" id="span-1"><i class="fas fa-eye"></i></span>
+                  </div>
+                <div id="errorePassword" style="color: red"></div>
+                <div class="user-box">
+                  <label for="confermaPassword" class="ms-3">Conferma password*</label>
+                    <br>
+                <input type="password" id="confermaPassword" placeholder="Conferma password" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <span class="password-toggle-icon text-black" id="span-2"><i class="fas fa-eye"></i></span>
+                  </div>
+                <div id="erroreConferma" style="color: red"></div>
+                <hr>
+                <h3 class="mt-5 ms-3">Dati anagrafici</h3>
+                    <label for="nome" class="ms-3 mt-5">Nome*</label>
+                    <br>
+                <input type="text" id="nome" placeholder="Nome" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <div id="erroreNome" style="color: red"></div>
+                <label for="cognome" class="ms-3">Cognome*</label>
+                    <br>
+                <input type="text" id="cognome" placeholder="Cognome" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <div id="erroreCognome" style="color: red"></div>
+                <label for="sesso" class="ms-3">Sesso*</label>
+                <br>
+                <select id="sesso" class="text-white-50 bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">     
+                  <option value="Maschio">Maschio</option>
+                  <option value="Femmina">Femmina</option>
+                </select>
+                <label for="codiceFiscale" class="ms-3">Codice fiscale*</label>
+                    <br>
+                <input type="text" id="codiceFiscale" placeholder="Codice fiscale" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <div id="erroreCodiceFiscale" style="color: red"></div>
+                <label for="partitaIva" class="ms-3">Partita IVA</label>
+                    <br>
+                <input type="text" id="partitaIva" placeholder="Partita iva" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <div id="errorePartitaIva" style="color: red"></div>
+                <label for="cittadinanza" class="ms-3">Cittadinanza*</label>
+                    <br>
+                <input type="text" id="cittadinanza" placeholder="Cittadinanza" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <div id="erroreCittadinanza" style="color: red"></div>
+                <label for="dataNascita" class="ms-3">Data di nascita*</label>
+                    <br>
+                <input type="date" id="dataNascita" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <div id="erroreDataNascita" style="color: red"></div>
+                <hr>
+                <h3 class="mt-5 ms-3">Recapiti</h3>
+                <label for="nazione" class="ms-3 mt-5">Nazione*</label>
+                <br>
+                <input type="text" id="nazione" placeholder="Nazione" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <div id="erroreNazione" style="color: red"></div>
+                <label for="città" class="ms-3">Città*</label>
+                    <br>
+                <input type="text" id="città" placeholder="Città" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <div id="erroreCittà" style="color: red"></div>
+                <label for="provincia" class="ms-3">Provincia*</label>
+                    <br>
+                <input type="text" id="provincia" placeholder="Provincia" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <div id="erroreProvincia" style="color: red"></div>
+                <label for="telefono" class="ms-3">Telefono*</label>
+                    <br>
+                <input type="text" id="telefono" placeholder="Telefono" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <div id="erroreTelefono" style="color: red"></div>
+                <label for="cap" class="ms-3">C.A.P.</label>
+                    <br>
+                <input type="text" id="cap" placeholder="C.A.P." class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                        <label for="comune" class="ms-3">Comune</label>
+                    <br>
+                <input type="text" id="comune" placeholder="Comune" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                               <label for="indirizzo" class="ms-3">Indirizzo</label>
+                    <br>
+                <input type="text" id="indirizzo" placeholder="Indirizzo" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <label for="numeroCivico" class="ms-3">Numero civico</label>
+                    <br>
+                <input type="text" id="numeroCivico" placeholder="Numero civico" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                <label for="località" class="ms-3">Località</label>
+                    <br>
+                <input type="text" id="località" placeholder="Località" class="text-white bg-dark bg-gradient border-black mb-3 col-10 pb-2 ps-2 pt-2 ms-3">
+                
+                <div class="text-center mt-3">
+                <button class="btn text-light" id="bottone2" type="submit">Conferma e continua</button>
+                </div>
+               </form>
+             </div>
+            </div>
+      </main>
+      <footer>
+        <!-- Footer con link utili -->
+        <div class="bg-dark text-center">
+          <div class="d-inline-block pt-5">
+        <a href="#" title="FAQ" class="text-decoration-none text-white-50">F.A.Q.</a>
+          </div>
+          <div class="d-inline-block ms-5 ps-5">
+            <a href="#" title="FAQ" class="text-decoration-none text-white-50">F.A.Q.</a>
+              </div>
+              <div class="d-inline-block ms-5 ps-5">
+                <a href="#" title="FAQ" class="text-decoration-none text-white-50">F.A.Q.</a>
+                  </div>
+                  <br>
+                  <div class="d-inline-block">
+                    <a href="#" title="Privacy" class="text-decoration-none text-white-50">Privacy</a>
+                      </div>
+                      <div class="d-inline-block ms-5 ps-5">
+                        <a href="#" title="Link 1" class="text-decoration-none text-white-50">Link1</a>
+                          </div>
+                          <div class="d-inline-block ms-5 ps-5">
+                            <a href="#" title="Link 1" class="text-decoration-none text-white-50">Link1</a>
+                              </div>
+                              <br>
+                              <div class="d-inline-block pe-3">
+                                <a href="#" title="Cookies" class="text-decoration-none text-white-50">Informativa sui cookies</a>
+                                  </div>
+                                  <div class="d-inline-block">
+                                    <a href="#" title="Link 2" class="text-decoration-none text-white-50">Link2</a>
+                                      </div>
+                                      <div class="d-inline-block ms-5 ps-5">
+                                        <a href="#" title="Link 2" class="text-decoration-none text-white-50">Link2</a>
+                                          </div>
+                                          <br>
+                                          <div id="align" class="d-inline-block me-5 pe-5 pb-3">
+                                            <a href="#" title="Crediti" class="text-decoration-none text-white-50">Crediti</a>
+                                              </div>
+                                              <p class="text-white-50 pb-5">Copyright &copy 2024 - <span id="logo4" class="text-danger">CO</span><span id="logo5" class="text-white">DE</span></p>
+                              </div>
+    
+      </footer>
+      <script src="Registrazione.js"></script>
+</body>
+</html>
